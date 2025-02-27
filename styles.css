@@ -1,0 +1,273 @@
+/* Geral */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Cabeçalho */
+header {
+    background: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+/* Navegação */
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #FFD700;
+}
+
+/* Seções */
+section {
+    padding: 50px;
+    text-align: center;
+    flex-grow: 1;
+}
+
+h2 {
+    font-size: 2em;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.1em;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: justify;
+}
+
+/* Imagem de Perfil */
+.perfil-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-top: 20px;
+    border: 5px solid #333;
+}
+
+/* Projetos */
+.projetos-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.projeto {
+    flex: 1 1 300px;
+    max-width: 300px;
+    background: white;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Estilização das imagens dos projetos */
+.projeto img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Efeito hover nas imagens */
+.projeto img:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Links dos projetos */
+.projeto a {
+    display: block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: bold;
+}
+
+.projeto a:hover {
+    text-decoration: underline;
+}
+
+/* Animação de entrada */
+.hidden {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease-in-out;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Contato */
+.contato-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contato-container input,
+.contato-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.contato-container button {
+    width: 100%;
+    padding: 10px;
+    background: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.contato-container button:hover {
+    background: #0056b3;
+}
+
+/* Rodapé */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9em;
+    margin-top: auto;
+}
+
+/* Ícones das redes sociais */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.social-icons a {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    transition: transform 0.3s;
+}
+
+.social-icons a:hover {
+    transform: scale(1.2);
+}
+
+/* Botão de Dark Mode */
+#darkModeToggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #333;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+    transition: background 0.3s;
+    z-index: 1000;
+    /* Garante que o botão fique acima de outros elementos */
+}
+
+#darkModeToggle:hover {
+    background: #555;
+}
+
+/* Modo Dark */
+.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.dark-mode header,
+.dark-mode footer {
+    background-color: #1e1e1e;
+}
+
+.dark-mode a {
+    color: #1db954;
+}
+
+.dark-mode h2,
+.dark-mode h3,
+.dark-mode p {
+    color: #ffffff;
+}
+
+.dark-mode .projeto {
+    background: #2a2a2a;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode .projeto a {
+    color: #1db954;
+    font-weight: bold;
+}
+
+.dark-mode .projeto a:hover {
+    text-decoration: underline;
+    color: #FFD700;
+}
+
+.dark-mode .social-icons a {
+    color: white;
+}
+
+.dark-mode .social-icons a:hover {
+    transform: scale(1.2);
+}
+
+.dark-mode .contato-container {
+    background: #2a2a2a;
+}
+
+.dark-mode #darkModeToggle {
+    background: #555;
+    color: white;
+}
+
+.dark-mode #darkModeToggle:hover {
+    background: #777;
+}
